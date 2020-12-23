@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
-		Employee Dertait
-	</title>
+	<title>Emp Home</title>
 </head>
 <body>
-Employee list
+<a href="">Post</a>
 </body>
 </html>

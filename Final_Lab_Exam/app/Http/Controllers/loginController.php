@@ -28,12 +28,21 @@ class loginController extends Controller
  			return view('Admin');
  		}
 
-    function viewlogout(Request $r){
-    	$r->session()->flush();
-    	return view('Login.login');
-    }
-
+   
 
 
     }
+     function viewlogout(Request $r){
+        $r->session()->flush();
+        return view('Login.login');
+    }
+ function viewsignup(Request $r){
+        //$r->session()->flush();
+        return view('signup');
+    }
+    function viewsignupsub(Request $r){
+        //$r->session()->flush();
+        return view('Login.login');
+    }
+
 }

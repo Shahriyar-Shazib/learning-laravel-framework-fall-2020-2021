@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\UserModel;
 use Illuminate\Http\Request;
-
+use App\Http\Requests\EmpRequest;
+use Validator;
 class UserModelController extends Controller
 {
     /**
@@ -17,6 +18,34 @@ class UserModelController extends Controller
     }
      public function viewinsert(){
         return view ('insertEmp');
+        
+    }
+     public function viewinsertpad(Request $req){
+        Validator::make($req->all(),[
+            'uid'=>'required',
+            
+            "pass"=>'required',
+            'name'=>'required',
+            "cmp"=>'required',
+            'contuct'=>'required'
+        ]);
+        $emp= new Emp;
+        $emp->userid=$req->uid;
+        $emp->pass=$req->pass;
+        $emp->name=$req->name;
+        $emp->company=$req->cmp;
+        $emp->contuct=$req->contuct;
+
+        DB::table('employee')->insert(
+    ['id' => '', 'userid' => $req->uid, 'name' => $req->name, 'company' => $req->cmp, 'contuct' => $req->contuct]
+    );
+         DB::table('user')->insert(
+    ['id' => '', 'userid' => $req->uid, 'password' => $req->pass, 'type' => 'employee']
+    );
+
+
+
+        return view ('viewemplist');
         
     }
     public function index()
