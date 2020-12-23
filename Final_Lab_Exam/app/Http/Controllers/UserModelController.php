@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\UserModel;
+use App\Models\employe;
 use Illuminate\Http\Request;
 use App\Http\Requests\EmpRequest;
 use Validator;
@@ -14,6 +15,8 @@ class UserModelController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function viewemplistad(){
+        //$emp=employee::all();
+       //echo count($emp);
         
     }
      public function viewinsert(){
@@ -44,7 +47,7 @@ class UserModelController extends Controller
     );
 
 
-
+       
         return view ('viewemplist');
         
     }

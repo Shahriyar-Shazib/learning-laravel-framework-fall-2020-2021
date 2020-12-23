@@ -25,6 +25,8 @@ Route::post('Admin/insert','UserModelController@viewinsertpad')->name('viewinser
 
 Route::get('signup/','loginController@viewsignup')->name('viewsignup');
 Route::post('signup/','loginController@viewsignupsub')->name('viewsignupsub');
+Route::get('emp/viewpost','empController@viewpost')->name('emp.viewpost');
+Route::get('emp/inserost','empController@viewinsertpost')->name('emp.viewinsertpost');
 //route::group(["middleware"=>['sass']],function(){
 
 /*Route::get('Admin/post/','adminControllerad@Viewpostad')->name('Admin.Viewpostad');

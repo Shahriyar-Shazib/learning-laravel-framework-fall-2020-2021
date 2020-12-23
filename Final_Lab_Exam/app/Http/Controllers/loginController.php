@@ -27,6 +27,12 @@ class loginController extends Controller
  			$r->session()->put('type',$user[0]['type']);
  			return view('Admin');
  		}
+        if ($user[0]['type']=='employee')
+        {
+            $r->session()->put('username',$r->userId);
+            $r->session()->put('type',$user[0]['type']);
+            return view('empHome');
+        }
 
    
 
