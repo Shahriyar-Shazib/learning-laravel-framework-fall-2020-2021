@@ -4,7 +4,7 @@
 	<title>Signup</title>
 </head>
 <body>
-      <form>
+      <form method="post">
       	@csrf
       	UserId: <input type="text" name="uid"><br>
       	password: <input type="password" name="pass"><br>

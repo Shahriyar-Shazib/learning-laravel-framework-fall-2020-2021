@@ -4,7 +4,7 @@
 	<title>Post</title>
 </head>
 <body>
-<form>
+<form method ="post">
 	Companey name :<input type="text" name="cmpnme"><br>
 	Job Title:<input type="text" name="title"><br>
 	Job Location:<input type="text" name="location"><br>

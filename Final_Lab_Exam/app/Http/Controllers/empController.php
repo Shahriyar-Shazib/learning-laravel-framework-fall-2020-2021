@@ -14,8 +14,18 @@ class empController extends Controller
         
     }
      public function viewinsertpost(){
-        $emp=job::all();
-       echo count($emp);
+        return view ('emppost')
+        
+    }
+     public function viewinsertpostsub(){
+        Validator::make($req->all(),[
+            'cmpnme'=>'required',
+            
+            "title"=>'required',
+            'location'=>'required',
+            "sal"=>'required',
+            
+        ]);
         
     }
 }
