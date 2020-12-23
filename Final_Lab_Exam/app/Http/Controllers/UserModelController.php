@@ -15,6 +15,10 @@ class UserModelController extends Controller
     public function viewemplistad(){
         
     }
+     public function viewinsert(){
+        return view ('insertEmp');
+        
+    }
     public function index()
     {
         //

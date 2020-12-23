@@ -20,6 +20,10 @@ Route::get('login/','loginController@Viewlogin')->name('Viewlogin');
 Route::get('logout/','loginController@viewlogout')->name('viewlogout');
 Route::post('login/','loginController@Viewafterlogin')->name('Viewafterlogin');
 Route::get('Admin/Emplist','UserModelController@viewemplistad')->name('viewemplistad');
+Route::get('Admin/insert','UserModelController@viewinsert')->name('viewinsertad');
+Route::post('Admin/insert','UserModelController@viewemplistad')->name('viewinsertpad');
+
+
 //route::group(["middleware"=>['sass']],function(){
 
 /*Route::get('Admin/post/','adminControllerad@Viewpostad')->name('Admin.Viewpostad');
